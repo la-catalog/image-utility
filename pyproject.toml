@@ -1,15 +1,18 @@
 [project]
-name = "python-package"
+name = "image-utility"
 version = "0.1.0"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
     {name = "thiagola92", email = "thiagola92@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+    "Pillow>=9.3.0",
+    "pytesseract>=0.3.10",
+]
 
 [project.urls]
-repository = "https://github.com/la-catalog/python-package"
+repository = "https://github.com/la-catalog/image-utility"
 
 [project.optional-dependencies]
 [tool.pdm]

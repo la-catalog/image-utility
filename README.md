@@ -1,5 +1,5 @@
-# python-package
+# image-utility
 Use esse pacote para...  
 
 # install
-`pdm add python-package`  
+`pdm add image-utility`  
