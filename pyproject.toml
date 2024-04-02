@@ -1,37 +1,36 @@
 [project]
 name = "image-utility"
 version = "0.1.0"
-readme = "README.md"
-license = {text = "MIT"}
-requires-python = ">=3.10"
+description = ""
 authors = [
     {name = "thiagola92", email = "thiagola92@gmail.com"},
 ]
 dependencies = [
-    "Pillow==9.3.0",
-    "pytesseract==0.3.10",
+    "Pillow>=10.3.0",
+    "pytesseract>=0.3.10",
 ]
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
 
 [project.urls]
 repository = "https://github.com/la-catalog/image-utility"
 
-[project.optional-dependencies]
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
 [tool.pdm]
+distribution = true
 
 [tool.pdm.scripts]
 unittest = "python -m unittest discover -v -f -s tests"
-black = "python -m black ."
-isort = "python -m isort -v --ac --profile black ."
+ruff = "python -m ruff format"
 
 [tool.pdm.dev-dependencies]
-lint = [
-    "black==22.10.0",
-    "isort==5.10.1",
+dev = [
+    "ruff>=0.3.5",
 ]
-
-[build-system]
-requires = ["pdm-pep517>=0.12.0"]
-build-backend = "pdm.pep517.api"
 
 [[tool.pdm.source]]
 url = "https://la-catalog.github.io/pypi/simple/"
