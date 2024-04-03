@@ -24,8 +24,8 @@ build-backend = "pdm.backend"
 distribution = true
 
 [tool.pdm.scripts]
-unittest = "python -m unittest discover -v -f -s tests"
-ruff = "python -m ruff format"
+pre_test = "python -m ruff format"
+test = "python -m unittest discover -v -f -s tests"
 
 [tool.pdm.dev-dependencies]
 lint = [
