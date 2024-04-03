@@ -28,7 +28,7 @@ unittest = "python -m unittest discover -v -f -s tests"
 ruff = "python -m ruff format"
 
 [tool.pdm.dev-dependencies]
-dev = [
+lint = [
     "ruff>=0.3.5",
 ]
 
